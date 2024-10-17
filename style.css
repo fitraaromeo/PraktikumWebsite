@@ -1,0 +1,74 @@
+/* Style for table */
+table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 3px;
+    text-align: center;
+    border: 1px solid;
+}
+
+thead th {
+    background-color: yellow; /* Warna background header */
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 18px;
+}
+
+tbody td {
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+/* Warna latar belakang untuk kolom hari */
+tbody td:nth-child(1) {
+    background-color: cyan; /* Kolom Senin */
+}
+
+tbody td:nth-child(2) {
+    background-color: black;
+    color: lightgray; /* Kolom Selasa dengan teks putih */
+}
+
+tbody td:nth-child(3) {
+    background-color: red; /* Kolom Rabu */
+}
+
+tbody td:nth-child(4) {
+    background-color: skyblue; /* Kolom Kamis */
+}
+
+tbody td:nth-child(5) {
+    background-color: green; /* Kolom Jumat */
+}
+
+/* Specific colors for header columns */
+thead th:nth-child(1) {
+    background-color: yellow; /* Header Senin */
+}
+
+thead th:nth-child(2) {
+    background-color: yellow; /* Header Selasa */
+}
+
+thead th:nth-child(3) {
+    background-color: yellow; /* Header Rabu */
+}
+
+
+thead th:nth-child(4) {
+    background-color: yellow; /* Header Kamis */
+}
+
+thead th:nth-child(5) {
+    background-color: yellow; /* Header Jumat */
+}
+
+h1 {
+    color: orange;
+    background-color: black;
+    text-align: center;
+    font-style: italic;
+    font-family: sans-serif;
+}
