@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Latar belakang hitam */
+    display: flex;
+    justify-content: center; /* Memposisikan kalkulator secara horizontal */
+    align-items: center; /* Memposisikan kalkulator secara vertikal */
+    height: 100vh; /* Menggunakan tinggi penuh viewport */
+    margin: 0;
+}
+
+.calculator {
+    background-color: #444; /* Latar belakang abu-abu gelap untuk kalkulator */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 320px; /* Menentukan lebar kalkulator */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px; /* Padding di dalam input */
+    font-size: 28px;
+    border: 1px solid #666; /* Border abu-abu */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #222; /* Latar belakang input */
+    color: white; /* Teks berwarna putih */
+    text-align: right; /* Menyelaraskan teks ke kanan */
+    box-sizing: border-box; /* Memastikan padding dan border tidak mempengaruhi total lebar */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom untuk tombol */
+    gap: 10px; /* Jarak antar tombol */
+}
+
+button {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555; /* Tombol abu-abu */
+    color: white; /* Teks berwarna putih */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #666; /* Warna tombol saat hover */
+}
+
+button:active {
+    background-color: #777; /* Warna tombol saat ditekan */
+}
+
+/* Tambahkan warna khusus untuk tombol operator */
+.operator {
+    background-color: #f39c12; /* Warna oranye untuk operator */
+}
+
+.operator:hover {
+    background-color: #e67e22; /* Warna oranye saat hover */
+}
+
+.operator:active {
+    background-color: #d35400; /* Warna oranye lebih gelap saat ditekan */
+}
+
+.clear {
+    background-color: #e74c3c; /* Merah untuk tombol clear */
+}
+
+.clear:hover {
+    background-color: #c0392b; /* Warna merah saat hover */
+}
+
+.clear:active {
+    background-color: #a93226; /* Warna merah lebih gelap saat ditekan */
+}
+
+.zero {
+    grid-column: span 2; /* Menggabungkan dua kolom untuk tombol 0 */
+}

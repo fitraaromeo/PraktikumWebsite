@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1C1C1C;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    background-color: #2E2E2E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+input[type="text"],
+input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #4F4F4F;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: calc(50% - 10px);
+    background-color: #3D3D3D;
+    color: #FFFFFF;
+}
+
+button {
+    padding: 10px;
+    background-color: #4F4F4F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #6E6E6E;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    padding: 10px;
+    background-color: #3D3D3D;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+li .task-text {
+    flex-grow: 1;
+    text-align: left; /* Membuat teks rata kiri */
+    color: #D1D1D1;
+}
+
+li .task-date {
+    font-style: italic;
+    color: #A9A9A9;
+    margin-left: 10px;
+}
+
+li button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    border-radius: 4px; /* Membuat tombol dengan sudut membulat */
+}
+
+li button .fas {
+    font-size: 18px;
+}
+
+li button.edit-btn {
+    background-color: #4C4C4C; /* Warna background abu-abu untuk tombol edit */
+}
+
+li button.delete-btn {
+    background-color: #FF4D4D; /* Warna background merah untuk tombol delete */
+}
+
+li button:hover.edit-btn {
+    background-color: #6E6E6E; /* Warna background abu-abu lebih terang saat hover */
+}
+
+li button:hover.delete-btn {
+    background-color: #FF3333; /* Warna background merah lebih terang saat hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #2E2E2E;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #FF4D4D;
+}
