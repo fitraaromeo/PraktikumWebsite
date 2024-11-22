@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <h1>Portfolio Dashboard</h1>
+      <nav>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="projects.html">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <div class="container">
+        <h2>Welcome to My Portfolio</h2>
+        <p>This is your dashboard to manage your projects, showcase your work, and share your story.</p>
+      </div>
+    </section>
+
+    <section class="summary">
+      <div class="container">
+        <h3>Summary</h3>
+        <div class="cards">
+          <div class="card">
+            <h4>Total Projects</h4>
+            <p id="totalProjects">0</p>
+          </div>
+          <div class="card">
+            <h4>Completed Projects</h4>
+            <p id="completedProjects">0</p>
+          </div>
+          <div class="card">
+            <h4>Pending Projects</h4>
+            <p id="pendingProjects">0</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-list">
+      <div class="container">
+        <h3>Your Projects</h3>
+        <div id="projectsContainer" class="projects-container"></div> <!-- Tempat untuk menampilkan proyek -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal untuk Edit Project -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Edit Project</h3>
+      <form id="editForm">
+        <label for="editTitle">Title:</label>
+        <input type="hidden" id="editId" name="id_project" required>
+        <input type="text" id="editTitle" name="title" required>
+        <label for="editDescription">Description:</label>
+        <textarea id="editDescription" name="description" required></textarea>
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar h1 {
+    font-size: 1.8rem;
+  }
+  
+  .navbar nav {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navbar nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+  
+  .navbar nav a:hover,
+  .navbar nav a.active {
+    background: #007BFF;
+  }
+  
+  /* Welcome Section */
+  .welcome {
+    background: #f4f4f4;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .welcome h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  /* Summary Section */
+  .summary {
+    padding: 2rem 0;
+    background: #fff;
+  }
+  
+  .summary h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .cards {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+  }
+  
+  .card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card p {
+    font-size: 1.5rem;
+    color: #007BFF;
+  }
+
+  .projects-list {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .project-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-card h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .project-card p {
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  /* .project-card button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+  } */
+  
+  /* .project-card button:hover {
+    background-color: #45a049;
+  } */
+  
+  /* .project-card .edit-btn {
+    background-color: #ffa500;
+  }
+  
+  .project-card .edit-btn:hover {
+    background-color: #e69500;
+  }
+  
+  .project-card .delete-btn {
+    background-color: #f44336;
+  }
+  
+  .project-card .delete-btn:hover {
+    background-color: #d32f2f;
+  } */
+
+  /* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  animation: fadeIn 0.3s ease-out; /* Smooth fade-in effect */
+}
+
+.modal-content {
+  background-color: #ffffff; /* White background */
+  margin: 10% auto; /* 10% from the top and centered */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  width: 80%; /* 80% of the screen */
+  max-width: 500px; /* Limit maximum width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  animation: slideIn 0.3s ease-out; /* Smooth slide-in effect */
+  position: relative; /* Ensure child elements like close button are positioned */
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333; /* Dark close button */
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ff0000; /* Change color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Modal content styling */
+.modal-content h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.modal-content textarea {
+  resize: none; /* Prevent resizing */
+  height: 100px; /* Fixed height */
+}
+
+.modal-content button {
+  width: 100%; /* Full-width button */
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007BFF; /* Primary color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.modal-content button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%; /* Reduce width on smaller screens */
+  }
+
+  .modal-content h3 {
+    font-size: 20px; /* Smaller heading size */
+  }
+
+  .modal-content input,
+  .modal-content textarea {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .modal-content button {
+    font-size: 14px; /* Adjust button font size */
+  }
+}
+
+  
+  /* Footer */
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+/* Styling untuk tombol delete */
+.delete-button {
+  background-color: red; /* Warna latar belakang merah */
+  color: white; /* Warna teks putih */
+  border: none; /* Menghilangkan border */
+  padding: 8px 16px; /* Padding di dalam tombol */
+  cursor: pointer; /* Menampilkan kursor pointer */
+  font-size: 14px; /* Ukuran font */
+  border-radius: 4px; /* Sudut tombol yang lebih halus */
+  transition: background-color 0.3s ease; /* Efek transisi saat hover */
+}
+
+/* Efek hover untuk tombol delete */
+.delete-button:hover {
+  background-color: darkred; /* Warna merah gelap saat hover */
+}
+
+
+/* Styling untuk tombol edit */
+.edit-button {
+  background-color: green; /* Warna latar belakang merah */
+  color: white; /* Warna teks putih */
+  border: none; /* Menghilangkan border */
+  padding: 8px 16px; /* Padding di dalam tombol */
+  cursor: pointer; /* Menampilkan kursor pointer */
+  font-size: 14px; /* Ukuran font */
+  border-radius: 4px; /* Sudut tombol yang lebih halus */
+  transition: background-color 0.3s ease; /* Efek transisi saat hover */
+}
+
+/* Efek hover untuk tombol delete */
+.edit-button:hover {
+  background-color: darkgreen; /* Warna merah gelap saat hover */
+}
+  
